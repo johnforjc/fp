@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace TestCentreGym\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

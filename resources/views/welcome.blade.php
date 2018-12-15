@@ -7,12 +7,17 @@
     <title>Test Centre Gym</title>
     <link rel="stylesheet" href="css/app.css">
     <script src="js/app.js"></script>
+    <script>
+        $('.carousel').caraousel({
+            interval:2000;
+        })
+    </script>
 </head>
 <body>
     <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
         <div class="container">
             <a class="navbar-brand" href="{{ url('/') }}">
-                {{ config('app.name', 'Laravel') }}
+                {{ config('app.name', 'Test Centre Gym') }}
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                 <span class="navbar-toggler-icon"></span>
@@ -65,6 +70,7 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
+
     <div class="footer bg-dark footer-dark">
         <div class="contact_us">
             <h1 style="60px">Contact Us</h1>
