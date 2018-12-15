@@ -1,10 +1,10 @@
 <?php
 
-namespace App;
+namespace TestCentreGym;
 
 use Illuminate\Database\Eloquent\Model;
 
-class satu_soal extends Model
+class Log extends Model
 {
     //
 }
