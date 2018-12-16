@@ -16,4 +16,4 @@ Route::get('/', function () {
 });
 
 Route::resource('soals','SoalsController');
-Route::resource('posts', 'PostsController');
+Route::resource('posts','PostsController');

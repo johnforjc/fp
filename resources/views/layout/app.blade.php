@@ -1,35 +1,62 @@
 <!DOCTYPE html>
-<html lang="{{ app()->getLocale() }}">
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test Centre Gym</title>
+    <link rel="stylesheet" href="/../css/app.css">
+    <style>
+        .content-div{
+            padding: 120px;
+            width: 100%;
+            height: 640px;
+            background-color: rgb(255,255,200);
+        }
 
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+        .content-div-box{
+            position: absolute;
+            width: 1100px;
+            height: 400px;
+        }
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+        .content-frame{
+            position: relative;
+            float:left;
+            margin:0 33px;
+            background-color: rgb(255,255,250);
+            width: 300px;
+            height: 400px;
+            padding: 20px;
+        }
 
-    <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+        .content-frame h1, .content-frame h3{
+            color: rgb(13, 170, 255);
+            text-align: center;
+        }
+
+        .content-frame h3{
+            font-size: 20px;
+        }
+
+        .content-frame img{
+            margin: 0px 25px;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+    <script src="js/app.js"></script>
+    <script>
+        $('.carousel').caraousel({
+            interval:2000;
+        })
+    </script>
 </head>
 <body>
-    <div id="app">
-        @include('include.navbar')
-        {{-- Khusus welcome page aja jangan dipake dilainnya --}}
+    @include('include.navbar')
+    <div style="margin:90px 30px 20px 50px;">
         @yield('welcomepage')
-        {{-- Selain Welcome Page --}}
-        <div class="container">
-            @include('include.messages')
-            @yield('content')
-        </div>
     </div>
-
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script>
-    <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
-    <script>
-        CKEDITOR.replace( 'article-ckeditor' );
-    </script>
+    @include('include.footer')
 </body>
 </html>

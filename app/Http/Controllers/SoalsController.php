@@ -16,7 +16,7 @@ class SoalsController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth', ['except' => ['index', 'show']]);
+        //$this->middleware('auth', ['except' => ['index', 'show']]);
     }
 
     /**
@@ -37,7 +37,7 @@ class SoalsController extends Controller
      */
     public function create()
     {
-        
+        return view('soals.create');
     }
 
     /**
@@ -48,7 +48,10 @@ class SoalsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'Kode_Soal' => 'required',
+            'soal' => 'required',
+        ]);
     }
 
     /**
