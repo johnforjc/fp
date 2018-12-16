@@ -16,6 +16,6 @@
             @endforeach
             {{$soals->links()}}
         @else
-            <p>No Post Found</p>
-        @endif 
+            <p>No exam found</p>
+        @endif
 @endsection
