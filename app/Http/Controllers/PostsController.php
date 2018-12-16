@@ -27,7 +27,7 @@ class PostsController extends Controller
      */
     public function create()
     {
-        //
+        return view('posts.create');
     }
 
     /**
@@ -38,7 +38,18 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'title' => 'required',
+            'body' => 'required',
+        ]);
+
+        // Create Post
+        $posts = new Post;
+        $posts->title=$request->input('title');
+        $posts->body=$request->input('body');
+        $posts->save();
+
+        return redirect('/posts')->with('success', 'Post Created');
     }
 
     /**
@@ -49,7 +60,8 @@ class PostsController extends Controller
      */
     public function show($id)
     {
-        //
+        $posts=Post::find($id);
+        return view('posts.show')->with('posts', $posts);
     }
 
     /**
@@ -60,7 +72,8 @@ class PostsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $posts=Post::find($id);
+        return view('posts.edit')->with('posts', $posts);
     }
 
     /**
@@ -72,7 +85,17 @@ class PostsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'title' => 'required',
+            'body' => 'required',
+        ]);
+
+        $posts = Post::find($id);
+        $posts->title=$request->input('title');
+        $posts->body=$request->input('body');
+        $posts->save();
+
+        return redirect('/posts');
     }
 
     /**

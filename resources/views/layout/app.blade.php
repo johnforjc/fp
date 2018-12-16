@@ -44,6 +44,10 @@
             width: 200px;
             height: 200px;
         }
+
+        .posts-content{
+            min-height: 400px;
+        }
     </style>
     <script src="js/app.js"></script>
     <script>
