@@ -1,5 +1,5 @@
 @extends('layout.app')
-@section('welcomepage')
+@section('section')
        <h1>Create Soal</h1>
         {!! Form::open(['action' => 'SoalsController@store', 'method' => 'POST']) !!}
             <div class="form-group">

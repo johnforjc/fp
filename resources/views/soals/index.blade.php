@@ -1,5 +1,5 @@
 @extends('layout.app')
-@section('welcomepage')
+@section('section')
         <h1>Soal</h1>
         @if(count($soals) >= 1)
             @foreach($soals as $soal)

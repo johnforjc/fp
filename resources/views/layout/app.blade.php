@@ -54,8 +54,9 @@
 </head>
 <body>
     @include('include.navbar')
+    @yield('welcomepage')
     <div style="margin:90px 30px 20px 50px;">
-        @yield('welcomepage')
+        @yield('section')
     </div>
     @include('include.footer')
 </body>

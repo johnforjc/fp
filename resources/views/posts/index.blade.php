@@ -1,6 +1,6 @@
 @extends('layout.app')
-@section('welcomepage')
-        <h1>post</h1>
+@section('section')
+        <h1>Post</h1>
         @if(count($posts) > 0)
             @foreach($posts as $post)
                 <div class="well">
