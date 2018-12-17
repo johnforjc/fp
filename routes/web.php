@@ -19,9 +19,10 @@ Route::get('/tryout', function(){
     return view('tryout');
 });
 
+
 Route::resource('soals','SoalsController');
 Route::resource('posts','PostsController');
-
+Route::resource('log','LogController');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

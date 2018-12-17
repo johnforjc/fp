@@ -6,15 +6,11 @@
             <th></th>
             <th></th>
             <th></th>
-            <th></th>
-            <th></th>
         </tr>
-        @foreach ($user as $users)
-        <th>{{'$user->id'}}</th>
-        <th>{{'$user->Kode_Soal'}} </th>
-        <th>{{'$score'}} </th>
-        <th></th>
-        <th></th>
+        @foreach($log as $users)
+    <th>{{$users->id}}</th>
+    <th>{{$users->Kode_Soal}}</th>
+    <th>{{$users->score}}</th>
         @endforeach
     </table>
 @endsection
