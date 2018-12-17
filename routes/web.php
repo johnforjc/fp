@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/tryout', function(){
+    return view('tryout');
+});
+
 Route::resource('soals','SoalsController');
 Route::resource('posts','PostsController');
 
