@@ -26,7 +26,7 @@ class SoalsController extends Controller
      */
     public function index()
     {
-        $soals = Soal::paginate(1);
+        $soals = Soal::paginate(10);
         return view('soals.index')->with('soals', $soals);
     }
 
@@ -50,8 +50,21 @@ class SoalsController extends Controller
     {
         $this->validate($request, [
             'Kode_Soal' => 'required',
-            'soal' => 'required',
+            'jawaban' => 'required',
         ]);
+
+        $soal = new Soal;
+        $soal->Kode_Soal = $request->input('Kode_Soal');
+        $soal->soal = $request->input('soal');
+        $soal->A = $request->input('A');
+        $soal->B = $request->input('B');
+        $soal->C = $request->input('C');
+        $soal->D = $request->input('D');
+        $soal->E = $request->input('E');
+        $soal->jawaban = $request->input('jawaban');
+        $soal->save();
+
+        return redirect('/soals')->with('success', 'Soal Created');
     }
 
     /**
@@ -62,7 +75,8 @@ class SoalsController extends Controller
      */
     public function show($id)
     {
-        //
+        $soal = Soal::find($id);
+        return view('soals.show')->with('soal', $soal);
     }
 
     /**
@@ -73,7 +87,8 @@ class SoalsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $soal = Soal::find($id);
+        return view('soals.edit')->with('soal', $soal);
     }
 
     /**
@@ -85,7 +100,23 @@ class SoalsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'Kode_Soal' => 'required',
+            'jawaban' => 'required',
+        ]);
+
+        $soal = Soal::find($id);
+        $soal->Kode_Soal = $request->input('Kode_Soal');
+        $soal->soal = $request->input('soal');
+        $soal->A = $request->input('A');
+        $soal->B = $request->input('B');
+        $soal->C = $request->input('C');
+        $soal->D = $request->input('D');
+        $soal->E = $request->input('E');
+        $soal->jawaban = $request->input('jawaban');
+        $soal->save();
+
+        return redirect('/soals')->with('success', 'Soal Updated');
     }
 
     /**
@@ -96,6 +127,8 @@ class SoalsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $soal = Soal::find($id);
+        $soal->delete();
+        return redirect('/soals')->with('success', 'Soal Removed');
     }
 }

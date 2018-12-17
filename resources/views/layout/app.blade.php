@@ -60,8 +60,14 @@
     @include('include.navbar')
     @yield('welcomepage')
     <div style="margin:90px 30px 20px 50px;">
+        @include('include.messages')
         @yield('section')
     </div>
     @include('include.footer')
+
+    <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace( 'article-ckeditor' );
+    </script>
 </body>
 </html>
