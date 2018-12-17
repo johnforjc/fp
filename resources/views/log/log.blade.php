@@ -1,16 +1,16 @@
-@extends('layout.app')
+@extends('layouts.app')
 
 @section('section')
-    <table>
+    <table class="table table-striped">
         <tr>
-            <th></th>
-            <th></th>
-            <th></th>
+            <th>Kode Soal</th>
+            <th>Nilai</th>
         </tr>
-        @foreach($log as $users)
-    <th>{{$users->id}}</th>
-    <th>{{$users->Kode_Soal}}</th>
-    <th>{{$users->score}}</th>
+        @foreach($user as $soal)
+        <tr>
+            <th>{{$soal->Kode_Soal}}</th>
+            <th>{{$soal->score}}</th>
+        </tr>    
         @endforeach
     </table>
 @endsection

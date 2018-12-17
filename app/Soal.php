@@ -13,4 +13,8 @@ class Soal extends Model
     public function soal(){
         return $this->belongsTo('TestCentreGym\Soal');
     }
+
+    public function log(){
+        return $this->hasMany('TestCentreGym\Log');
+    }
 }
