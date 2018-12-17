@@ -1,4 +1,4 @@
-@extends('layout.app')
+@extends('layouts.app')
 @section('section')
     <h1>Create Post</h1>
     {!! Form::open(['action' =>'PostsController@store', 'method' => 'POST']) !!}

@@ -1,4 +1,4 @@
-@extends('layout.app')
+@extends('layouts.app')
 @section('section')
         <h1>Soal</h1>
         @if(count($soals) > 0)

@@ -1,4 +1,4 @@
-@extends('layout.app')
+@extends('layouts.app')
 @section('section')
         <h1>{{$soal->Kode_Soal}}</h1>
         <p>{{$soal->soal}}</p>
