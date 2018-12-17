@@ -58,6 +58,5 @@
     <div style="margin:90px 30px 20px 50px;">
         @yield('content')
     </div>
-    @include('include.footer')
 </body>
 </html>
