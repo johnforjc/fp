@@ -4,6 +4,6 @@
         <h3 style="color: rgb(0,0,255)">
             Sudah siap?
         </h3>
-        <a href="/soal" class="btn btn-primary">Mulai</a>
+        <a href="/go/index" class="btn btn-primary">Mulai</a>
     </div>
 @endsection

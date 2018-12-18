@@ -11,5 +11,6 @@
             {{$soals->links()}}
         @else
             <p>No Post Found</p>
-        @endif 
+        @endif
+        <a href ="/soals/create" class="btn btn-primary">Create Soal</a>
 @endsection

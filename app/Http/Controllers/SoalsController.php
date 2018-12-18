@@ -16,7 +16,7 @@ class SoalsController extends Controller
      */
     public function __construct()
     {
-        //$this->middleware('auth', ['except' => ['index', 'show']]);
+        $this->middleware('auth');
     }
 
     /**
@@ -73,6 +73,7 @@ class SoalsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+    
     public function show($id)
     {
         $soal = Soal::find($id);

@@ -20,6 +20,13 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/log">Cek hasilmu</a>
                     </li>
+
+                    @if (Auth::id() === 1)
+                    <li class="nav-item">
+                        <a class="nav-link" href="/soals">Soal</a>
+                    </li>
+                    @endif
+
                 </ul>
             </ul>
 
