@@ -25,13 +25,14 @@ class LogController extends Controller
     public function store(Request $request){
         $this->validate($request, [
             'id' => 'required',
-            'nilai' => 'required'
+            'score' => 'required'
         ]);
 
         $log = new Log;
         $log->id=$request->input('id');
         $log->email=$request->input('email');
-        $log->nilai=$request->input('nilai');
+        $log->score=$request->input('score');
+        $log->Kode_Soal=$request->input('Kode_Soal');
         $log->save();
 
         return redirect('/log');

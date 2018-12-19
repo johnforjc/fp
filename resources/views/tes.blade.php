@@ -22,8 +22,16 @@
                 {{Form::text('id', Auth::user()->id)}}
             </div>
             <div class="form-soal">
-                {{Form::label('nilai', 'nilai')}}
-                {{Form::textarea('nilai', 'nilai' )}}
+                {{Form::label('score', 'score')}}
+                {{Form::textarea('score', 'score' )}}
+			</div>
+			<div class="form-soal">
+                {{Form::label('email', 'email')}}
+                {{Form::textarea('email', Auth::user()->email )}}
+			</div>
+			<div class="form-soal">
+                {{Form::label('Kode_Soal', 'Kode_Soal')}}
+                {{Form::textarea('Kode_Soal', 'F1' )}}
             </div>
             {{Form::submit('Submit', ['class' => 'button','id'=>'start'])}}
             {!! Form::close() !!}

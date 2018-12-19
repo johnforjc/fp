@@ -157,7 +157,10 @@
         }
     }
     
+    
     score.append('<h2>Score : ' + ( numCorrect/questions.length*100 ) + '</h2>');
+
+        $("#score").val( numCorrect/questions.length*100);
     return score;
     }
 
