@@ -33,13 +33,23 @@
             <div class="content-frame">
                 <h1>Cari Info</h1>
                 <h3>Cari info test centre sekarang juga. Ada materi pelajaran juga. Ayo gabung dengan Test Centre Gym</h3>
-                <a href="/posts"><img src="img/home/info.png" title="info"></a>
+                <div class="image-icon">
+                    <a href="/posts"><img src="img/home/info.png" title="info"></a>
+                </div>
             </div>
             <div class="content-frame">
-
+                <h1>Ayo Berlatih</h1>
+                <h3>Uji Kemampuanmu dalam test centre disini</h3>
+                <div class="image-icon">
+                    <a href="/tryout"><img src="img/home/tryout.jpg" title="tryout"></a>
+                </div>               
             </div>
             <div class="content-frame">
-
+                <h1>Cek Hasilmu</h1>
+                <h3>Siap atau tidak, cek hasil tryout test centre mu disini</h3>
+                <div class="image-icon">
+                    <a href="/log"><img src="img/home/score.jpg" title="score"></a>
+                </div>
             </div>
         </div>
     </div>
