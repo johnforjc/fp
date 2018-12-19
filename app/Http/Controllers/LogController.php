@@ -17,7 +17,6 @@ class LogController extends Controller
     public function store(Request $request){
         $this->validate($request, [
             'id' => 'required',
-            'email' => 'required',
             'nilai' => 'required'
         ]);
 
