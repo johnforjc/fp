@@ -16,7 +16,12 @@ Route::get('/', function () {
 });
 
 Route::get('/tryout', function(){
-    return view('tryout');
+    if (Auth::user()) return view('tryout');
+    return view('welcome');
+});
+
+Route::get('/to', function(){
+    return view('tes');
 });
 
 

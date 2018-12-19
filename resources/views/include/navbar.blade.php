@@ -14,12 +14,17 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/posts">Cari info baru</a>
                     </li>
+                    
+                    @if (Auth::user())
                     <li class="nav-item">
                         <a class="nav-link" href="/tryout">Ayo berlatih</a>
                     </li>
+
+                    
                     <li class="nav-item">
                         <a class="nav-link" href="/log">Cek hasilmu</a>
                     </li>
+                    @endif
 
                     @if (Auth::id() === 1)
                     <li class="nav-item">

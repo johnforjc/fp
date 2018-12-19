@@ -5,7 +5,7 @@
             @foreach($soals as $soal)
                 <div>
                     <h3><a href="/soals/{{$soal->id}}">{{$soal->Kode_Soal}}</h3></a>
-                    <p>{{substr($soal->soal, 0, 150) . '...'}}</p>
+                    <p>{!!substr($soal->soal, 0, 150) . '...'!!}</p>
                 </div>
             @endforeach
             {{$soals->links()}}
