@@ -31,7 +31,13 @@
     var selections = []; 
     var quiz = $('#quiz');
     
+    $('.form-soal').hide();
+
     displayNext();
+    displayNext();
+
+    $('#start').hide();
+    $('#start').hide();
  
     $('#next').on('click', function (e) {
     e.preventDefault();
@@ -62,17 +68,11 @@
     displayNext();
     });
     
-    $('#start').on('click', function (e) {
-    e.preventDefault();
-    
-    if(quiz.is(':animated')) {
-        return false;
-    }
-    questionCounter = 0;
-    selections = [];
-    displayNext();
-    $('#start').hide();
-    });
+    // $('#start').on('click', function (e) {
+    // e.preventDefault();
+
+
+    // });
     
     $('.button').on('mouseenter', function () {
     $(this).addClass('active');
@@ -160,4 +160,6 @@
     score.append('<h2>Score : ' + ( numCorrect/questions.length*100 ) + '</h2>');
     return score;
     }
+
+
 })();
